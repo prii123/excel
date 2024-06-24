@@ -20,7 +20,8 @@ Sub CombinaHojas()
             ultimaFila = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
             
             ' Copia los datos desde la hoja actual a la hoja de destino
-            ws.Range("A1").EntireRow.Copy Destination:=wsDestino.Cells(ultimaFilaDestino, 1)
+            'ws.Range("A1").EntireRow.Copy Destination:=wsDestino.Cells(ultimaFilaDestino, 1)
+            ws.Range("A1:Z100").EntireRow.Copy Destination:=wsDestino.Cells(ultimaFilaDestino, 1)
             
             ' Actualiza la última fila de la hoja de destino
             ultimaFilaDestino = wsDestino.Cells(wsDestino.Rows.Count, "A").End(xlUp).Row + 1
